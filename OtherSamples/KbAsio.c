@@ -17,7 +17,7 @@ void handle_sig (int sigNo)
   if (sigNo == SIGIO)
     write (STD_OUT, "KB_HIT", 6);
   if (sigNo == SIGTERM || sigNo == SIGINT)
-    write (STD_OUT, "Process terminated or interruped", 32);
+    write (STD_OUT, "Process recvd term or inter", 32);
 }
 
 struct sigaction sig_act;
